@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from website.views import welcome, date, about
 
+# Here where you put all your urls mapping
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # The first argument specifies the url, second specify the function of the view
+    path('', welcome),
+    path('date/', date),
+    path('about/', about),
 ]
